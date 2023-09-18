@@ -23,22 +23,13 @@ while (!isSunk) {
                 if (numOfHits == 3) {
                     isSunk = true;
                     alert("You sunk my battleship!");
-                
-            
             }
                 break;
             default:
+                alert("MISS!");
                 continue;
         }
-        // if (currentGuess === loc1 || currentGuess === loc2 || currentGuess === loc3) {
-        //     alert("HIT!");
-        //     numOfHits++
-        //     if (numOfHits === 3) {
-        //         isSunk = true;
-        //         alert("You sunk my battleship!");
-        //     }
-        // }
     }
 }
 
-alert(`Congratulations! It only took ${numOfGuesses} guesses!`);
+alert(`Congratulations! It only took ${numOfGuesses} guesses! That's ${3/numOfGuesses * 100} % accuracy!`);
