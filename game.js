@@ -1,6 +1,8 @@
 
-var [loc1, loc2, loc3] = [3, 4, 5];
-var currentGuess; 
+var randomLoc = Math.floor(Math.random() * 5);
+var [loc1, loc2, loc3] = [randomLoc, randomLoc + 1, randomLoc + 2];
+var currentGuess;
+var alreadyGuessed = [];
 var numOfGuesses = 0;
 var numOfHits = 0;
 var isSunk = false;
@@ -14,20 +16,25 @@ while (!isSunk) {
     } else {
         numOfGuesses++;
         // Check if the user's guess matches the location
-        switch (currentGuess) {
-            case loc1:
-            case loc2:
-            case loc3:
-                alert("HIT!");
-                numOfHits++;
-                if (numOfHits == 3) {
-                    isSunk = true;
-                    alert("You sunk my battleship!");
+        if (!alreadyGuessed.includes(currentGuess)) {
+            switch (currentGuess) {
+                case loc1:
+                case loc2:
+                case loc3:
+                    alreadyGuessed.push(currentGuess);
+                    alert("HIT!");
+                    numOfHits++;
+                    if (numOfHits == 3) {
+                        isSunk = true;
+                        alert("You sunk my battleship!");
+                }
+                    break;
+                default:
+                    alert("MISS!");
+                    continue;
             }
-                break;
-            default:
-                alert("MISS!");
-                continue;
+        } else {
+            alert("You already guessed that location!");
         }
     }
 }
