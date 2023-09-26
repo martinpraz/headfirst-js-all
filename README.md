@@ -1,2 +1,2 @@
-# battleship-game
-Simple JS attempt at an old time classic.
+# headfirst-js-all
+Contains the more substantial exercises from the Headfirst Javascript textbook. 
