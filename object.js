@@ -1,6 +1,58 @@
 
-// let chevy = {make: "Chevrolet", model: "Bel Air", year: 1957, mileage: 1071, isConvertible: false, color: "red", passengers: 2};
-// let cadi = {make: "Cadillac", model: "DeVille", year: 1955, mileage: 12892, isConvertible: false, color: "tan", passengers: 5, rearBuckets: true};
+let chevy = {
+    make: "Chevrolet",
+    model: "Bel Air",
+    year: 1957,
+    mileage: 1071,
+    isConvertible: false,
+    color: "red",
+    passengers: 2,
+    isStarted: false,
+    start: function () {
+        this.isStarted = true;
+        console.log(`Starting the engine...`);
+    },
+    stop: function () {
+        this.isStarted = false;
+        console.log(`Stopping the engine...`);
+    },
+    drive: function () {
+        if (this.isStarted) {
+            console.log(`Now driving ${this.make} ${this.model}.`)
+        } else {
+            console.log(`You need to start the engine first!`);
+        }
+
+    }
+};
+
+let cadi = {
+    make: "Cadillac",
+    model: "DeVille",
+    year: 1955,
+    mileage: 12892,
+    isConvertible: false,
+    color: "tan",
+    passengers: 5,
+    rearBuckets: true,
+    isStarted: false,
+    start: function () {
+        this.isStarted = true;
+        console.log(`Starting the engine...`);
+    },
+    stop: function () {
+        this.isStarted = false;
+        console.log(`Stopping the engine...`);
+    },
+    drive: function () {
+        if (this.isStarted) {
+            console.log(`Now driving ${this.make} ${this.model}.`)
+        } else {
+            console.log(`You need to start the engine first!`);
+        }
+
+    }
+};
 
 // // this function takes an object as argument and lists all its properties
 // // easier done with "for in" loop, but leave like this for learning
@@ -26,15 +78,32 @@
 //     return false;
 // }
 
-// var taxi = {
-//     make: "Webville Motors",
-//     model: "Taxi",
-//     year: 1955,
-//     color: "yellow",
-//     passengers: 4,
-//     convertible: false,
-//     mileage: 281341
-// };
+var taxi = {
+    make: "Webville Motors",
+    model: "Taxi",
+    year: 1955,
+    color: "yellow",
+    passengers: 4,
+    convertible: false,
+    mileage: 281341,
+    isStarted: false,
+    start: function () {
+        this.isStarted = true;
+        console.log(`Starting the engine...`);
+    },
+    stop: function () {
+        this.isStarted = false;
+        console.log(`Stopping the engine...`);
+    },
+    drive: function () {
+        if (this.isStarted) {
+            console.log(`Now driving ${this.make} ${this.model}.`)
+        } else {
+            console.log(`You need to start the engine first!`);
+        }
+
+    }
+};
 
 // // main loop
 // let isBuy = preQual(taxi);
@@ -108,60 +177,86 @@
 // var carToSell = makeCar();
 // displayCar(carToSell);
 
-// var fiat = {
-//     make: "Fiat",
-//     model: "500",
-//     year: 1957,
-//     color: "medium blue",
-//     passengers: 2,
-//     convertible: false,
-//     mileage: 88000,
-//     isStarted: false,
-//     start: function () {
-//         this.isStarted = true;
-//         console.log(`Starting the engine...`);
-//     },
-//     stop: function () {
-//         this.isStarted = false;
-//         console.log(`Stopping the engine...`);
-//     },
-//     drive: function () {
-//         if (this.isStarted) {
-//             console.log(`Zoom zoom!`)
-//         } else {
-//             console.log(`You need to start the engine first!`);
-//         }
+var fiat = {
+    make: "Fiat",
+    model: "500",
+    year: 1957,
+    color: "medium blue",
+    passengers: 2,
+    convertible: false,
+    mileage: 88000,
+    isStarted: false,
+    start: function () {
+        this.isStarted = true;
+        console.log(`Starting the engine...`);
+    },
+    stop: function () {
+        this.isStarted = false;
+        console.log(`Stopping the engine...`);
+    },
+    drive: function () {
+        if (this.isStarted) {
+            console.log(`Zoom zoom!`)
+        } else {
+            console.log(`You need to start the engine first!`);
+        }
 
-//     }
-// }
+    }
+}
 
 // fiat.drive();
 // fiat.start();
 // fiat.drive();
 // fiat.stop();
 
-var song = {
-    name: "Walk This Way",
-    artist: "Run-D.M.C.",
-    minutes: 4,
-    seconds: 3,
-    genre: "80s",
-    playing: false,
-    play: function () {
-        if (!this.playing) {
-            this.playing = true;
-            console.log(`Starting playback...`);
-            console.log(`Playing ${this.name} by ${this.artist}`);
-        }
-    },
+// var song = {
+//     name: "Walk This Way",
+//     artist: "Run-D.M.C.",
+//     minutes: 4,
+//     seconds: 3,
+//     genre: "80s",
+//     playing: false,
+//     play: function () {
+//         if (!this.playing) {
+//             this.playing = true;
+//             console.log(`Starting playback...`);
+//             console.log(`Playing ${this.name} by ${this.artist}`);
+//         }
+//     },
 
-    pause: function () {
-        if (this.playing) {
-            this.playing = false;
-            console.log(`Stopping playback...`);
-        }
-    }
-};
+//     pause: function () {
+//         if (this.playing) {
+//             this.playing = false;
+//             console.log(`Stopping playback...`);
+//         }
+//     }
+// };
 
-song.play();
-song.pause();
+// song.play();
+// song.pause();
+
+// var eightBall = {
+//     index: 0,
+//     advice: ["yes", "no", "maybe", "not a chance"],
+//     shake: function () {
+//         this.index++;
+//         if (this.index >= this.advice.length) {
+//             this.index = 0;
+//         }
+//     },
+//     look: function () {
+//         return this.advice[this.index];
+//     }
+// };
+
+// let count = 25;
+
+// while (count > 0) {
+//     eightBall.shake();
+//     console.log(eightBall.look());
+//     count--;
+// }
+
+for (let property in chevy) {
+    console.log(`${property} :: ${chevy[property]}`);
+}
