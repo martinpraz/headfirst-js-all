@@ -13,6 +13,7 @@ var costs = [.25, .27, .25, .25, .25, .25,
 // function bubblePrinter(array) {
 //     let highestScore = 0;
 //     let bestSolutionList = [];
+//     // loop through array, determine highest score
 //     for (let i = 0; i < array.length; i++) {
 //         if (array[i] > highestScore) {
 //             highestScore = array[i];
@@ -20,9 +21,11 @@ var costs = [.25, .27, .25, .25, .25, .25,
 //         console.log(`Bubble solution #${i} score: ${scores[i]}`);
         
 //     }
+//     // loop through array again, push every item equal to highest score to bestSolutionList array
 //     for (let i = 0; i < array.length; i++) {
 //         if (array[i] === highestScore) {
-//             bestSolutionList.push(i);
+//             // bestSolutionList.push(i);
+//             bestSolutionList[bestSolutionList.length] = i;
 //         }
 //     }
     
@@ -33,22 +36,27 @@ var costs = [.25, .27, .25, .25, .25, .25,
 
 // bubblePrinter(scores);
 
+// print score for every bubble solution
+function printScores(array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(`Bubble solution #${i} score: ${scores[i]}`);
+    }
+}
 
-// 
-function printAndGetHighScore(array) {
+// loop through array, determine highest score
+function getHighScore(array) {
     let highestScore = 0;
 
     for (let i = 0; i < array.length; i++) {
-        console.log(`Bubble solution #${i} score: ${scores[i]}`);
-
         if (array[i] > highestScore) {
             highestScore = array[i];
         }
     }
-    
+
     return highestScore;
 }
 
+// loop through array again, push every item equal to highest score to bestSolutionList array
 function getBestResults(array, highestScore) {
     let bestSolutionList = [];
 
@@ -61,27 +69,28 @@ function getBestResults(array, highestScore) {
     return bestSolutionList;
 }
 
+//
 function getMostCostEffectiveSolution(costs, scores, highestScore) {
-    let cost = 1;
-    let indexOfLowCost;
+    let lowestCost = 1;
+    let lowCostSolution;
 
+    // iterate over two arrays (of the same length) simultaneously
     for (let i = 0; i < scores.length; i++) {
-        if (scores[i] === highestScore && costs[i] < cost) {
-            indexOfLowCost = i;
-            cost = costs[i];
+        if (scores[i] === highestScore && costs[i] < lowestCost) {
+            lowestCost = costs[i];
+            lowCostSolution = i;
         }
     }
 
-    return indexOfLowCost;
+    return lowCostSolution;
 }
 
-printAndGetHighScore(scores);
-
-const highestScore = printAndGetHighScore(scores);
+printScores(scores);
+const highestScore = getHighScore(scores);
 const bestSolutionList = getBestResults(scores, highestScore);
 const mostCostEffective = getMostCostEffectiveSolution(costs, scores, highestScore);
 
-// console.log(`Bubble tests: ${scores.length}`);
-// console.log(`Highest bubble score: ${highestScore}`);
-// console.log(`Solutions with the highest score: ${bestSolutionList}`);
-console.log(mostCostEffective);
+console.log(`Bubble tests: ${scores.length}`);
+console.log(`Highest bubble score: ${highestScore}`);
+console.log(`Solutions with the highest score: ${bestSolutionList}`);
+console.log(`Most cost effective solution: ${mostCostEffective}`);
