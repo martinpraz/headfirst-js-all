@@ -137,13 +137,13 @@ function setSecret(file, secretPassword, secret) {
     }
 }
 
-var secret = getSecret(superSecretFile, 2);
-console.log(secret);
+// var secret = getSecret(superSecretFile, 2);
+// console.log(secret);
 
-setSecret(superSecretFile, 2, "Dr Evel's next meeting is in Glasgow Scotland");
+// setSecret(superSecretFile, 2, "Dr Evel's next meeting is in Glasgow Scotland");
 
-secret = getSecret(superSecretFile, 2);
-console.log(secret);
+// secret = getSecret(superSecretFile, 2);
+// console.log(secret);
 
 //Create a random car object from scratch using "Auto-O-Matic"
 function makeCar () {
@@ -177,8 +177,8 @@ function displayCar (car) {
     console.log(`Your new car is a ${car.year} ${car.make} ${car.model}.`);
 }
 
-var carToSell = makeCar();
-displayCar(carToSell);
+// var carToSell = makeCar();
+// displayCar(carToSell);
 
 var fiat = {
     make: "Fiat",
@@ -217,7 +217,13 @@ var fiat = {
         }
     },
     addFuel: function (amount) {
-        this.fuel += amount;
+        if (isNaN(this.fuel)) {
+            this.fuel = 0;
+            this.fuel += amount;
+        }
+        else {
+            this.fuel += amount;
+        }
     }
 };
 
@@ -279,7 +285,7 @@ var eightBall = {
 //     count--;
 // }
 
-for (let property in chevy) {
-    console.log(`${property} :: ${chevy[property]}`);
-}
+// for (let property in chevy) {
+//     console.log(`${property} :: ${chevy[property]}`);
+// }
 
