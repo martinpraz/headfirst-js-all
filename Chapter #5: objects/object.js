@@ -288,4 +288,3 @@ var eightBall = {
 // for (let property in chevy) {
 //     console.log(`${property} :: ${chevy[property]}`);
 // }
-

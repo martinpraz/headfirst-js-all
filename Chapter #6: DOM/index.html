@@ -1,0 +1,48 @@
+<!-- 1 -->
+<!-- <!DOCTYPE html>
+
+<html>
+<head>
+    
+    <title>0x449a</title>
+</head>
+<body>
+    <p id="test">Just a generic paragraph. I guess I'm doing JS again, but that's ok. $120K (x2) is waiting for me.</p>
+    <script src="object.js"></script>
+</body>
+</html> -->
+
+
+<!-- 2 -->
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>0x449a</title>
+    <script>
+        function init() {
+            let planet = document.getElementById("greenplanet");
+            planet.innerHTML = "This is coming straight from the script in the head!";
+            planet.setAttribute("class", "redtext");
+        }
+    
+        // we're not calling the function, we're assigning it to the "onload" property of the "window" object
+        window.onload = init;
+    </script>
+    <style>
+        .redtext {
+            color: red;
+        }
+    </style>
+</head>
+<body id="body">
+    <h3>RED PLANET</h3>
+    <p id="redplanet">Nothing to report.</p>
+    <h3>GREEN PLANET</h3>
+    <p id="greenplanet">All is well.</p>
+    <h3>BLUE PLANET</h3>
+    <p id="blueplanet">All systems A-OK.</p>
+    <!-- <script src="code.js"></script> -->
+    
+</body>
+</html>
