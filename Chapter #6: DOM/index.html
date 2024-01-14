@@ -30,22 +30,35 @@
         // window.onload = init;
 
         document.addEventListener("DOMContentLoaded", function () {
-            let planet = document.getElementById("greenplanet");
-            planet.innerHTML = "This is here as a reaction to an event listener being.";
-            planet.setAttribute("class", "redtext");
+            // Get the reference to the element and store it in variable for easy access
+            let greenPlanet = document.getElementById("greenplanet");
+            greenPlanet.innerHTML = "RED ALERT: Hit by phaser fire!";
+            // not changing the font directly, but adding attribute to the element (class="redtext")
+            greenPlanet.setAttribute("class", "redtext");
+
+            // let bluePlanet = document.getElementById("blueplanet");
+            // if (bluePlanet) {
+            //     bluePlanet.remove();
+            // } else {
+            //     console.error("Element not found.");
+            // }
         });
     </script>
     <style>
         .redtext {
             color: red;
         }
+
+        .bluetext {
+            color: blue;
+        }
     </style>
 </head>
 <body id="body">
-    <h3>RED PLANET</h3>
-    <p id="redplanet">Nothing to report.</p>
     <h3>GREEN PLANET</h3>
     <p id="greenplanet">All is well.</p>
+    <h3>RED PLANET</h3>
+    <p id="redplanet">Nothing to report.</p>
     <h3>BLUE PLANET</h3>
     <p id="blueplanet">All systems A-OK.</p>
     <!-- <script src="code.js"></script> -->
