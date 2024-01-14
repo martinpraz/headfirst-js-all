@@ -15,4 +15,5 @@
 
 const greenPlanet = document.getElementById("greenplanet");
 
-greenPlanet.innerHTML = "I'm on fire. This is not fine at all!";
+greenPlanet.innerHTML = "New innerHTML";
+greenPlanet.style.color = "red";

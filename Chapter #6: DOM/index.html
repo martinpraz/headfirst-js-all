@@ -20,14 +20,20 @@
 <head>
     <title>0x449a</title>
     <script>
-        function init() {
-            let planet = document.getElementById("greenplanet");
-            planet.innerHTML = "This is coming straight from the script in the head!";
-            planet.setAttribute("class", "redtext");
-        }
+        // function init() {
+        //     let planet = document.getElementById("greenplanet");
+        //     planet.innerHTML = "This is coming straight from the script in the head!";
+        //     planet.setAttribute("class", "redtext");
+        // }
     
         // we're not calling the function, we're assigning it to the "onload" property of the "window" object
-        window.onload = init;
+        // window.onload = init;
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let planet = document.getElementById("greenplanet");
+            planet.innerHTML = "This is here as a reaction to an event listener being triggered.";
+            planet.setAttribute("class", "redtext");
+        });
     </script>
     <style>
         .redtext {
