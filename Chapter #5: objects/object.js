@@ -177,6 +177,7 @@ function displayCar (car) {
     console.log(`Your new car is a ${car.year} ${car.make} ${car.model}.`);
 }
 
+// displayCar(makeCar());
 // var carToSell = makeCar();
 // displayCar(carToSell);
 
