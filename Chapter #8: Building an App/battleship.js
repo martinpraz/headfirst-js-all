@@ -36,7 +36,7 @@ let model = {
             let ship = this.ships[i];
             let index = ship.locations.indexOf(guess);
             if (index >= 0) {
-                ship.hits[i] = "hit";
+                ship.hits[index] = "hit";
                 // notify the view that we got a hit
                 view.displayHit(guess);
                 view.displayMessage("HIT!");
@@ -69,3 +69,12 @@ let model = {
     }
 
 };
+
+let controller = {
+    // get and process the player's guess
+    // keep track of the number of guesses
+    // ask the model to update itself based on the latest guess
+    // determine when the game is over (ie. all ships have been sunk)
+
+    
+}
