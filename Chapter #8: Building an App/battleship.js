@@ -75,6 +75,12 @@ let controller = {
     // keep track of the number of guesses
     // ask the model to update itself based on the latest guess
     // determine when the game is over (ie. all ships have been sunk)
+    guesses: 0,
 
+
+    // processes guesses and passes them to the model, detects the end of the game
+    processGuess: function(guess) {
+        // TODO
+    }
     
-}
+};
