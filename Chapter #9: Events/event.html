@@ -15,9 +15,6 @@
     </style>
     <script>
         function init() {
-            // let image = document.getElementById("zero");
-            // image.onclick = showAnswer;
-
             let images = document.getElementsByTagName("img");
             for (let i = 0; i < images.length; i++) {
                 images[i].onclick = showAnswer;
@@ -28,7 +25,10 @@
         function showAnswer(eventObj) {
             let image = eventObj.target;
             
-            console.log(image);
+            let name = image.id;
+            name += ".jpg";
+            image.src = name;
+            // console.log(image);
         }
         
         document.addEventListener("DOMContentLoaded", init);
