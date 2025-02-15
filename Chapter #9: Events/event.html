@@ -28,7 +28,18 @@
             let name = image.id;
             name += ".jpg";
             image.src = name;
-            // console.log(image);
+            
+        // Set a timer to blur the image again after 3 seconds
+        setTimeout(() => {
+                hideAnswer(image);
+            }, 3000);
+
+        }
+
+        function hideAnswer(image) {
+            let name = image.id;
+            name += "blur.jpg"; // Assuming the blurred version has "-blur" appended
+            image.src = name;
         }
         
         document.addEventListener("DOMContentLoaded", init);
