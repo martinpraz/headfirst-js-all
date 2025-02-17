@@ -29,13 +29,11 @@
             name += ".jpg";
             image.src = name;
             
-        // Set a timer to blur the image again after 3 seconds
-        setTimeout(() => {
-                hideAnswer(image);
-            }, 3000);
-
+        // Set a timer to blur the image again after 2 seconds
+        setTimeout(hideAnswer, 2000, image);
         }
 
+        
         function hideAnswer(image) {
             let name = image.id;
             name += "blur.jpg";
