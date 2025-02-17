@@ -10,20 +10,20 @@
 
         function init() {
             let map = document.getElementById("map");
-            map.onmouseover = showCoords;
+            map.onmousemove = showCoords;
         }
 
         function showCoords(eventObj) {
             let coords = document.getElementById("coords");
-
-            
+            let x = eventObj.clientX;
+            let y = eventObj.clientY;
             coords.innerHTML = `Map coordinates: ${x}, ${y}.`;
         }
     </script>
 </head>
 <body>
     
-    <img id="map" src="map.jpg" alt="pirate map">
+    <img id="map" src="map.jpg" alt="pirate map with X marking the treasure">
     <p id="coords">Move mouse to find coordinates...</p>
 </body>
 </html>
