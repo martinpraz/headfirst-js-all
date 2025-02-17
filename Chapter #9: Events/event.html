@@ -26,8 +26,7 @@
         function showAnswer(eventObj) {
             let image = eventObj.target;
             
-            let name = image.id;
-            name += ".jpg";
+            let name = image.id + ".jpg";
             image.src = name;
 
         // Set a timer to blur the image again after 2 seconds
@@ -37,8 +36,7 @@
         
         function hideAnswer(eventObj) {
             let image = eventObj.target;
-            let name = image.id;
-            name += "blur.jpg";
+            let name = image.id + "blur.jpg";
             image.src = name;
         }
         
