@@ -13,6 +13,10 @@ function checkNotPaid(passenger) {
     return (!passenger.paid);
 }
 
+function printPassenger(passenger) {
+    console.log((passenger.paid) ? `${passenger.name} has paid.` : `${passenger.name} has not paid.`)
+}
+
 function processPassengers(passengers, testFunction) {
     for (let i = 0; i < passengers.length; i++) {
         if (testFunction(passengers[i])) {
