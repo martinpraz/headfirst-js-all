@@ -25,5 +25,11 @@ function processPassengers(passengers, testFunction) {
 let allCanFly = processPassengers(passengers, checkNoFlyList);
 
 if (!allCanFly) {
-    console.log("We have a passenger on the no fly list!");
+    console.log("The plane can't take off: We have a passenger on the no fly list!");
+}
+
+let allPaid = processPassengers(passengers, checkNotPaid);
+
+if (!allPaid) {
+    console.log("The plane can't take off: Not everyone has paid!");
 }
