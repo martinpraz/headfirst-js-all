@@ -6,7 +6,7 @@ let passengers = [{name: "Jane Doloop", paid: true},
 
 
 function checkNoFlyList(passenger) {
-    return passenger.name = "Dr Evel";
+    return passenger.name === "Dr. Evel";
 }
 
 function checkNotPaid(passenger) {
@@ -20,4 +20,10 @@ function processPassengers(passengers, testFunction) {
         }
     }
     return true;
+}
+
+let allCanFly = processPassengers(passengers, checkNoFlyList);
+
+if (!allCanFly) {
+    console.log("We have a passenger on the no fly list!");
 }
