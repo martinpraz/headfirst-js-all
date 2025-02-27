@@ -10,7 +10,7 @@ function checkNoFlyList(passenger) {
 }
 
 function checkNotPaid(passenger) {
-    return passenger.paid;
+    return (!passenger.paid);
 }
 
 function processPassengers(passengers, testFunction) {
