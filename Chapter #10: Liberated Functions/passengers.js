@@ -46,9 +46,18 @@ function serveCustomer(passenger) {
 }
 
 function createDrinkOrder(passenger) {
+    let orderFunction;
+
     if (passenger.ticket = "firstclass") {
-        alert("Would like a cocktail or wine?");
+        orderFunction = function() {
+            alert("Would like a cocktail or wine?");
+        }
+        
     } else {
-        alert("Your choice is cola or water");
+        orderFunction = function() {
+            alert("Your choice is cola or water");
+        }    
     }
+    return orderFunction;
+
 }
