@@ -1,8 +1,8 @@
 
-let passengers = [{name: "Jane Doloop", paid: true},
-    {name: "Dr. Evel", paid: true},
-    {name: "Sue Property", paid: false},
-    {name: "John Funcall", paid: true }];
+let passengers = [{name: "Jane Doloop", paid: true, ticket: "coach"},
+    {name: "Dr. Evel", paid: true, ticket: "firstclass"},
+    {name: "Sue Property", paid: false, ticket: "firstclass"},
+    {name: "John Funcall", paid: true, ticket: "coach"}];
 
 
 function checkNoFlyList(passenger) {
@@ -36,4 +36,15 @@ let allPaid = processPassengers(passengers, checkNotPaid);
 
 if (!allPaid) {
     console.log("The plane can't take off: Not everyone has paid!");
+}
+
+function serveCustomer(passenger) {
+    // get drink order
+    if (passenger.ticket = "firstclass") {
+        alert("Would like a cocktail or wine?");
+    } else {
+        alert("Your choice is cola or water");
+    }
+    // get dinner order
+    // pick up trash
 }
