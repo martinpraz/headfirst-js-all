@@ -38,17 +38,27 @@ if (!allPaid) {
     console.log("The plane can't take off: Not everyone has paid!");
 }
 
+function servePassengers(passengers) {
+    for (let i = 0; i < passengers.length; i++) {
+        serveCustomer(passengers[i]);
+    }
+}
+
 function serveCustomer(passenger) {
-    
-    createDrinkOrder(passenger);
+    let getDrinkOrderFunction = createDrinkOrder(passenger);
+    getDrinkOrderFunction();
     // get dinner order
+    // getDrinkOrderFunction()
+    // getDrinkOrderFunction()
+    // show movie
+    // getDrinkOrderFunction()
     // pick up trash
 }
 
 function createDrinkOrder(passenger) {
     let orderFunction;
 
-    if (passenger.ticket = "firstclass") {
+    if (passenger.ticket === "firstclass") {
         orderFunction = function() {
             alert("Would like a cocktail or wine?");
         }
@@ -61,3 +71,6 @@ function createDrinkOrder(passenger) {
     return orderFunction;
 
 }
+
+// MAIN
+servePassengers(passengers);
