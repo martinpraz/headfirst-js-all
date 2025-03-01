@@ -39,12 +39,16 @@ if (!allPaid) {
 }
 
 function serveCustomer(passenger) {
-    // get drink order
+    
+    createDrinkOrder(passenger);
+    // get dinner order
+    // pick up trash
+}
+
+function createDrinkOrder(passenger) {
     if (passenger.ticket = "firstclass") {
         alert("Would like a cocktail or wine?");
     } else {
         alert("Your choice is cola or water");
     }
-    // get dinner order
-    // pick up trash
 }
