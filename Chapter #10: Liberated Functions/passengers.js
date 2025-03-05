@@ -1,8 +1,8 @@
 
-let passengers = [{name: "Jane Doloop", paid: true, ticket: "coach"},
-    {name: "Dr. Evel", paid: true, ticket: "firstclass"},
-    {name: "Sue Property", paid: false, ticket: "premium"},
-    {name: "John Funcall", paid: true, ticket: "coach"}];
+let passengers = [{ name: "Jane Doloop", paid: true, ticket: "coach" },
+{ name: "Dr. Evel", paid: true, ticket: "firstclass" },
+{ name: "Sue Property", paid: false, ticket: "premium" },
+{ name: "John Funcall", paid: true, ticket: "coach" }];
 
 
 // function checkNoFlyList(passenger) {
@@ -57,16 +57,16 @@ function createDrinkOrder(passenger) {
     let orderFunction;
 
     if (passenger.ticket === "firstclass") {
-        orderFunction = function() {
+        orderFunction = function () {
             alert("Would like a cocktail or wine? (firstclass)");
         }
-        
-    } else if (passenger.ticket === "premium")  {
-        orderFunction = function() {
+
+    } else if (passenger.ticket === "premium") {
+        orderFunction = function () {
             alert("Your choice is wine, cola or water (premium)");
-        }    
+        }
     } else {
-        orderFunction = function() {
+        orderFunction = function () {
             alert("Your choice is cola or water (coach)");
         }
     }
@@ -78,16 +78,16 @@ function createDinnerOrder(passenger) {
     let orderFunction;
 
     if (passenger.ticket === "firstclass") {
-        orderFunction = function() {
+        orderFunction = function () {
             alert("Choices are chicken or pasta (firstclass)");
         }
-        
-    } else if (passenger.ticket === "premium")  {
-        orderFunction = function() {
+
+    } else if (passenger.ticket === "premium") {
+        orderFunction = function () {
             alert("Choices are snack box or cheese plate (premium)");
-        }    
+        }
     } else {
-        orderFunction = function() {
+        orderFunction = function () {
             alert("Choices are peanuts or pretzels (coach)");
         }
     }
