@@ -49,6 +49,17 @@
           return -1;
         }
       }
+
+      function printProducts(products) {
+        for (let i = 0; i < products.length; i++) {
+          console.log(
+            `Name: ${products[i].name}, Calories: ${products[i].calories}, Color: ${products[i].color}, Sold: ${products[i].sold}`
+          );
+        }
+      }
+
+      products.sort(compareSold);
+      printProducts(products);
     </script>
   </head>
   <body></body>
