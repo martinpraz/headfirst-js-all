@@ -6,7 +6,7 @@
     <title>Closures</title>
     <script>
       function makePassword(password) {
-        return function passwordMatches(passwordGuess) {
+        return function doesPasswordMatch(passwordGuess) {
           return passwordGuess === password;
         };
       }
