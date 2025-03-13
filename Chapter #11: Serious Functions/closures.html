@@ -16,6 +16,18 @@
           return num1 * num2;
         };
       }
+
+      function makeCounter() {
+        let count = 0;
+
+        return {
+            increment: function() {
+                count++;
+                return count;
+            }
+        }
+
+      }
     </script>
   </head>
   <body></body>
