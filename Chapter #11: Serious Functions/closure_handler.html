@@ -16,18 +16,31 @@
     </style>
     <script>
       // without closure
-      let count = 0;
+      // GLOBAL: could potentially cause trouble
+      //   let count = 0;
 
+      //   window.onload = function () {
+      //     let button = document.getElementById("clickme");
+      //     button.onclick = handleClick;
+      //   };
+
+      //   function handleClick() {
+      //     let div = document.getElementById("message");
+      //     count++;
+      //     div.innerHTML = `You clicked me ${count} times`;
+      //   }
+
+      // WITH closure
       window.onload = function () {
+        let count = 0;
         let button = document.getElementById("clickme");
-        button.onclick = handleClick;
-      };
-
-      function handleClick() {
         let div = document.getElementById("message");
-        count++;
-        div.innerHTML = `You clicked me ${count} times`;
-      }
+
+        button.onclick = function () {
+          count++;
+          div.innerHTML = `You clicked me ${count} times with closure`;
+        };
+      };
     </script>
   </head>
   <body>
