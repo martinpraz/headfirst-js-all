@@ -15,7 +15,19 @@
       }
     </style>
     <script>
-      //
+      // without closure
+      let count = 0;
+
+      window.onload = function () {
+        let button = document.getElementById("clickme");
+        button.onclick = handleClick;
+      };
+
+      function handleClick() {
+        let div = document.getElementById("message");
+        count++;
+        div.innerHTML = `You clicked me ${count} times`;
+      }
     </script>
   </head>
   <body>
