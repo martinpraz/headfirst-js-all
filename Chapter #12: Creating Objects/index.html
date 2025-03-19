@@ -32,6 +32,29 @@
       for (let i = 0; i < dogs.length; i++) {
         dogs[i].bark();
       }
+
+      // constructor for coffee
+      function Coffee(roast, ounces) {
+        this.roast = roast;
+        this.ounces = ounces;
+        this.size = "";
+
+        // methods
+        this.getSize = function () {
+          if (this.ounces == 16) {
+            this.size = "large";
+          } else if (this.ounces == 12) {
+            this.size = "medium";
+          } else {
+            this.size = "small";
+          }
+        };
+
+        this.getSize();
+        this.toString = function () {
+          console.log(`You've ordered a ${this.size} ${this.roast} coffee.`);
+        };
+      }
     </script>
   </head>
   <body></body>
