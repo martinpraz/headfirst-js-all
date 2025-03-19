@@ -63,6 +63,23 @@
 
       console.log(houseBlend.toString());
       console.log(darkRoast.toString());
+
+      // Album constructor testing without the new keyword
+      function Album(title, artist, year) {
+        // properties
+        this.title = title;
+        this.artist = artist;
+        this.year = year;
+
+        // methods
+        this.play = function () {
+          console.log("Music for Darkside is now playing");
+        };
+      }
+
+      // testing for Album
+      let darkside = new Album("Dark side of the cheese", "Pink Mouse", 1971);
+      darkside.play();
     </script>
   </head>
   <body></body>
