@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // constructor
+      function Dog(name, breed, weight) {
+        // properties
+        this.name = name;
+        this.breed = breed;
+        this.weight = weight;
+
+        // methods
+        this.bark = function () {
+          if (this.weight > 25) {
+            alert(`${this.name} says Woof!`);
+          } else {
+            alert(`${this.name} says yip`);
+          }
+        };
+      }
+
+      // different instances of Dog
+      let fido = new Dog("Fido", "mixed", 38);
+      let fluffy = new Dog("Fluffy", "poodle", 30);
+      let spot = new Dog("Spot", "Chihuaha", 10);
+
+      let dogs = [fido, fluffy, spot];
+
+      for (let i = 0; i < dogs.length; i++) {
+        dogs[i].bark();
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
