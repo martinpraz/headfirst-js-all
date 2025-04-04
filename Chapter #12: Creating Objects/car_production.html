@@ -5,24 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Car Production</title>
     <script>
-      function Car(
-        make,
-        model,
-        year,
-        color,
-        passengers,
-        convertible,
-        mileage,
-        started
-      ) {
+      function Car(params) {
         // properties
-        this.make = make;
-        this.model = model;
-        this.year = year;
-        this.color = color;
-        this.passengers = passengers;
-        this.convertible = convertible;
-        this.mileage = mileage;
+        this.make = params.make;
+        this.model = params.model;
+        this.year = params.year;
+        this.color = params.color;
+        this.passengers = params.passengers;
+        this.convertible = params.convertible;
+        this.mileage = params.mileage;
         this.started = false;
 
         // methods
@@ -45,6 +36,16 @@
         };
       }
       // parameters for the Car constructor
+      let chevyParams = {
+        make: "Chevy",
+        model: "Bel Air", 
+        year: 1957,
+        color: "red",
+        passengers: 2,
+        convertible: false,
+        mileage: 1021
+      }
+
       let cadiParams = {
         make: "GM",
         model: "Cadillac", 
@@ -53,6 +54,16 @@
         passengers: 5,
         convertible: false,
         mileage: 12892
+      }
+
+      let testCarParams = {
+        make: "Webville",
+        model: "Taxi", 
+        year: 1955,
+        color: "yellow",
+        passengers: 4,
+        convertible: false,
+        mileage: 281341
       }
 
       let volvoParams = {
@@ -66,19 +77,47 @@
       }
 
       // cars for testing
-      let chevy = new Car("Chevy", "Bel Air", 1957, "red", 2, false, 1021);
+      let chevy = new Car(chevyParams);
       let cadi = new Car(cadiParams);
-      let testCar = new Car("Webville Motors", "Taxi", 1955, "yellow", 4, false, 281341);
+      let testCar = new Car(testCarParams);
       let volvo = new Car(volvoParams)
 
       let cars = [chevy, cadi, testCar, volvo];
 
-      for (let i = 0; i < cars.length; i++) {
-        cars[i].start();
-        cars[i].drive();
-        cars[i].drive();
-        cars[i].stop();
+    //   for (let i = 0; i < cars.length; i++) {
+    //     cars[i].start();
+    //     cars[i].drive();
+    //     cars[i].drive();
+    //     cars[i].stop();
+    //  }
+
+     // Code for the exercise from page 542
+     function Dog(name, breed, weight) {
+        // properties
+        this.name = name;
+        this.breed = breed;
+        this.weight = weight;
+
+      }
+
+     let limoParams = {
+      make: "Webville",
+      model: "limo",
+      year: 1983,
+      color: "black",
+      passengers: 12,
+      convertible: true,
+      mileage: 21120
      }
+
+
+     //
+     let limo = new Car(limoParams);
+     let limoDog = new Dog("Rhapsody in Blue", "poodle", 40);
+
+     console.log(`${limo.make} ${limo.model} is an ${typeof(limo)}`);
+     console.log(`${limoDog.name} is an ${typeof(limoDog)}`);
+
     </script>
   </head>
   <body></body>
