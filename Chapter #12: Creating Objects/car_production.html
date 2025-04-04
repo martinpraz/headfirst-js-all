@@ -27,10 +27,12 @@
 
         // methods
         this.start = function () {
+          console.log(`Starting the car...`);
           this.started = true;
         };
 
         this.stop = function () {
+          console.log(`Now stopping the car...`);
           this.started = false;
         };
 
@@ -42,6 +44,21 @@
           }
         };
       }
+
+      // cars for testing
+      let chevy = new Car("Chevy", "Bel Air", 1957, "red", 2, false, 1021);
+      let cadi = new Car("GM", "Cadillac", 1955, "tan", 5, false, 12892);
+      let testCar = new Car("Webville Motors", "Taxi", 1955, "yellow", 4, false, 281341);
+      let volvo = new Car("Volvo", "S60", 2012, "black", 4, false, 155000)
+
+      let cars = [chevy, cadi, testCar, volvo];
+
+      for (let i = 0; i < cars.length; i++) {
+        cars[i].start();
+        cars[i].drive();
+        cars[i].drive();
+        cars[i].stop();
+     }
     </script>
   </head>
   <body></body>
