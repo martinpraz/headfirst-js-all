@@ -44,12 +44,32 @@
           }
         };
       }
+      // parameters for the Car constructor
+      let cadiParams = {
+        make: "GM",
+        model: "Cadillac", 
+        year: 1955,
+        color: "tan",
+        passengers: 5,
+        convertible: false,
+        mileage: 12892
+      }
+
+      let volvoParams = {
+        make: "Volvo",
+        model: "S60",
+        year: 2012,
+        color: "black",
+        passengers: 4,
+        convertible: false,
+        mileage: 155000
+      }
 
       // cars for testing
       let chevy = new Car("Chevy", "Bel Air", 1957, "red", 2, false, 1021);
-      let cadi = new Car("GM", "Cadillac", 1955, "tan", 5, false, 12892);
+      let cadi = new Car(cadiParams);
       let testCar = new Car("Webville Motors", "Taxi", 1955, "yellow", 4, false, 281341);
-      let volvo = new Car("Volvo", "S60", 2012, "black", 4, false, 155000)
+      let volvo = new Car(volvoParams)
 
       let cars = [chevy, cadi, testCar, volvo];
 
